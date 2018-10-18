@@ -18,11 +18,9 @@ using XrmToolBox.Extensibility.Interfaces;
 
 namespace XrmToolBox___Bulk_Delete_Tool
 {
-    public partial class BulkDeleteTool : PluginControlBase, IGitHubPlugin, IPayPalPlugin, IStatusBarMessenger, IMessageBusHost
+    public partial class BulkDeleteTool : PluginControlBase, IGitHubPlugin, IPayPalPlugin, IStatusBarMessenger, IMessageBusHost, IHelpPlugin
     {
         /// <summary>
-        /// TODO: Update GitHub information
-        /// TODO: Update Help information
         /// TODO: Run for first X records
         /// TODO: Allow Selection of Multiple Views?
         /// </summary>
@@ -552,7 +550,8 @@ namespace XrmToolBox___Bulk_Delete_Tool
                     if (!e.Cancelled && ExecutionRecordSet.Entities.Count > 0)
                     {
                         txtRecordCount.Text = e.Result.ToString();
-                        tsbExecute.Enabled = true;                        
+                        tsbExecute.Enabled = true;
+                        ShowWarningNotification("Deleting records will permanently delete those records!", null, 32);
                     }
                 },
                 AsyncArgument = null,
@@ -575,9 +574,10 @@ namespace XrmToolBox___Bulk_Delete_Tool
                 //Message = $"Deleting {ExecutionRecordSet.Entities.Count.ToString("#,#", CultureInfo.InvariantCulture)} Records{Environment.NewLine}from{Environment.NewLine}{ExecutionRecordSet.Entities[0].LogicalName}",
                 Message = GetDeleteStatusMessage(ExecutionRecordSet.Entities[0].LogicalName, 0, ExecutionRecordSet.Entities.Count, new TimeSpan()),
                 Work = (w, e) =>
-                {
+                {   
                     this.Invoke((MethodInvoker)delegate ()
                     {
+                        HideNotification();
                         toolStripDropDownButton1.Enabled = tsbCount.Enabled = tsbExecute.Enabled = tsbtnHelp.Enabled = tsbtnFetchBuilder.Enabled = false;
                         tsbtnStop.Enabled = true;
                     });
@@ -808,7 +808,7 @@ namespace XrmToolBox___Bulk_Delete_Tool
 
         public string RepositoryName
         {
-            get { return "XrmToolBox---Bulk-Workflow-Execution"; }
+            get { return "XrmToolBox-BulkDeleteTool"; }
         }
 
         public string UserName
@@ -836,7 +836,7 @@ namespace XrmToolBox___Bulk_Delete_Tool
 
         public string HelpUrl
         {
-            get { return "http://www.google.com"; }
+            get { return "https://github.com/andypopkin/XrmToolBox-BulkDeleteTool"; }
         }
 
         #region MessageBus implementation

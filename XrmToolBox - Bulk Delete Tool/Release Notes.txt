@@ -1,4 +1,4 @@
-﻿v1.2018.12.19
+﻿v1.2018.10.19
  - Ability to Delete records from CRM based on System Views, Personal Views, or Custom FetchXML Queries
  - Ability to select the batch size and interval (in seconds) between batches
  - Ability to edit FetchXML Query in FetchXML Builder tool within XrmToolBox
