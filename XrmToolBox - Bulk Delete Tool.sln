@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XrmToolBox - Bulk Delete Tool", "XrmToolBox - Bulk Delete Tool\XrmToolBox - Bulk Delete Tool.csproj", "{498D5363-CBF9-4816-98D6-0A6A9B584DEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{498D5363-CBF9-4816-98D6-0A6A9B584DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498D5363-CBF9-4816-98D6-0A6A9B584DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498D5363-CBF9-4816-98D6-0A6A9B584DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498D5363-CBF9-4816-98D6-0A6A9B584DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
