@@ -47,6 +47,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cmbEntities = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_bypassCustomPluginExecution = new System.Windows.Forms.Label();
+            this.chkBypassPlugins = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInterval = new System.Windows.Forms.TextBox();
@@ -207,7 +209,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(274, 84);
+            this.groupBox1.Size = new System.Drawing.Size(274, 114);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Entity";
@@ -235,6 +237,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbl_bypassCustomPluginExecution);
+            this.groupBox2.Controls.Add(this.chkBypassPlugins);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtInterval);
@@ -247,10 +251,29 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(422, 84);
+            this.groupBox2.Size = new System.Drawing.Size(422, 114);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Info";
+            // 
+            // lbl_bypassCustomPluginExecution
+            // 
+            this.lbl_bypassCustomPluginExecution.AutoSize = true;
+            this.lbl_bypassCustomPluginExecution.Location = new System.Drawing.Point(98, 76);
+            this.lbl_bypassCustomPluginExecution.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_bypassCustomPluginExecution.Name = "lbl_bypassCustomPluginExecution";
+            this.lbl_bypassCustomPluginExecution.Size = new System.Drawing.Size(167, 13);
+            this.lbl_bypassCustomPluginExecution.TabIndex = 13;
+            this.lbl_bypassCustomPluginExecution.Text = "Bypass Custom Plugin Execution?";
+            // 
+            // chkBypassPlugins
+            // 
+            this.chkBypassPlugins.AutoSize = true;
+            this.chkBypassPlugins.Location = new System.Drawing.Point(270, 76);
+            this.chkBypassPlugins.Name = "chkBypassPlugins";
+            this.chkBypassPlugins.Size = new System.Drawing.Size(15, 14);
+            this.chkBypassPlugins.TabIndex = 12;
+            this.chkBypassPlugins.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -336,11 +359,11 @@
             this.groupBox3.Controls.Add(this.radViews);
             this.groupBox3.Controls.Add(this.radFetchXML);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(2, 111);
+            this.groupBox3.Location = new System.Drawing.Point(2, 141);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(274, 460);
+            this.groupBox3.Size = new System.Drawing.Size(274, 430);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "View";
@@ -353,7 +376,7 @@
             this.lstViews.Location = new System.Drawing.Point(28, 85);
             this.lstViews.Margin = new System.Windows.Forms.Padding(2);
             this.lstViews.Name = "lstViews";
-            this.lstViews.Size = new System.Drawing.Size(238, 368);
+            this.lstViews.Size = new System.Drawing.Size(238, 329);
             this.lstViews.TabIndex = 10;
             this.lstViews.SelectedIndexChanged += new System.EventHandler(this.lstViews_SelectedIndexChanged);
             // 
@@ -401,11 +424,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.rtxtFetchXML);
-            this.groupBox4.Location = new System.Drawing.Point(284, 111);
+            this.groupBox4.Location = new System.Drawing.Point(284, 141);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(422, 460);
+            this.groupBox4.Size = new System.Drawing.Size(422, 430);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "FetchXML Query";
@@ -418,7 +441,7 @@
             this.rtxtFetchXML.Location = new System.Drawing.Point(4, 17);
             this.rtxtFetchXML.Margin = new System.Windows.Forms.Padding(2);
             this.rtxtFetchXML.Name = "rtxtFetchXML";
-            this.rtxtFetchXML.Size = new System.Drawing.Size(414, 436);
+            this.rtxtFetchXML.Size = new System.Drawing.Size(414, 406);
             this.rtxtFetchXML.TabIndex = 0;
             this.rtxtFetchXML.Text = "";
             this.rtxtFetchXML.TextChanged += new System.EventHandler(this.rtxtFetchXML_TextChanged);
@@ -486,5 +509,7 @@
         private System.Windows.Forms.ToolStripButton tsbtnHelp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbtnFetchBuilder;
+        private System.Windows.Forms.Label lbl_bypassCustomPluginExecution;
+        private System.Windows.Forms.CheckBox chkBypassPlugins;
     }
 }
