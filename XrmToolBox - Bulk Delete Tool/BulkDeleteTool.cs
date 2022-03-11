@@ -610,6 +610,8 @@ namespace XrmToolBox___Bulk_Delete_Tool
                         {
                             Target = d.ToEntityReference()
                         };
+                        // Add in a parameter - bypass custom plugin execution if checkbox is ticked.
+                        dr.Parameters.Add("BypassCustomPluginExecution", chkBypassPlugins.Checked);
 
                         // Add in EMR stuff here
                         RunEMR(dr, w);
